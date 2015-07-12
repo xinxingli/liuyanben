@@ -1,0 +1,43 @@
+CREATE TABLE tb_user
+(
+    ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Usernc VARCHAR(50) NOT NULL,
+    Userpwd VARCHAR(50) NOT NULL,
+    Truename VARCHAR(50) NOT NULL,
+    Email VARCHAR(50) NOT NULL,
+    Qq VARCHAR(20) NOT NULL,
+    Tel VARCHAR(20) NOT NULL,
+    Ip VARCHAR(2) NOT NULL,
+    Address VARCHAR(250) NOT NULL,
+    Face VARCHAR(50) NOT NULL,
+    Regtime DATETIME NOT NULL,
+    Sex VARCHAR(2) NOT NULL,
+    Usertype INT NOT NULL
+);
+CREATE TABLE liuyanben.tb_leaveword
+(
+    Id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Userid INT NOT NULL,
+    Createtime DATETIME NOT NULL,
+    Title VARCHAR(250) NOT NULL,
+    Content TEXT NOT NULL
+);
+
+CREATE TABLE liuyanben.tb_replayword
+(
+    ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Userid INT NOT NULL,
+    Createtimes DATETIME NOT NULL,
+    Titles VARCHAR(100) NOT NULL,
+    Contents TEXT NOT NULL,
+    Leave_id INT NOT NULL
+);
+
+CREATE TABLE liuyanben.tb_adm
+(
+    ID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    Userword VARCHAR(20) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    Email VARCHAR(30) NOT NULL,
+    Ip VARCHAR(10) NOT NULL
+);
